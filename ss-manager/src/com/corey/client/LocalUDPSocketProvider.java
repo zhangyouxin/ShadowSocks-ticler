@@ -33,11 +33,11 @@ public class LocalUDPSocketProvider
                         this.localUDPSocket.connect(
                                         InetAddress.getByName(ConfigEntity.serverIP), ConfigEntity.serverUDPPort);
                         this.localUDPSocket.setReuseAddress(true);
-                        logger.debug(TAG, "new DatagramSocket()已成功完成.");
+                        logger.debug( "new DatagramSocket()已成功完成.");
                 }
                 catch (Exception e)
                 {
-                	logger.error(TAG, "localUDPSocket创建时出错，原因是：" + e.getMessage(), e);
+                	logger.error( "localUDPSocket创建时出错，原因是：" + e.getMessage(), e);
                 }
         }
  

@@ -3,6 +3,7 @@
  */
 package com.corey.client;
 
+import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 
 /**
@@ -12,8 +13,8 @@ import java.net.SocketAddress;
  */
 public class ConfigEntity {
 
-	public static String serverIP;
-	public static SocketAddress localUDPPort;
-	public static int serverUDPPort;
+	public static String serverIP = "95.85.54.29";
+	public static SocketAddress localUDPPort = new InetSocketAddress("localhost", 8888);
+	public static int serverUDPPort = 6001;
 
 }

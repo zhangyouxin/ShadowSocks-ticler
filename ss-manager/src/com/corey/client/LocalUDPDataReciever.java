@@ -32,14 +32,14 @@ public class LocalUDPDataReciever
                         {
                                 try
                                 {
-                                	logger.debug(LocalUDPDataReciever.TAG, "本地UDP端口侦听中，端口=" + ConfigEntity.localUDPPort + "...");
+                                	logger.debug( "本地UDP端口侦听中，端口=" + ConfigEntity.localUDPPort + "...");
  
                                         //开始侦听
                                         LocalUDPDataReciever.this.udpListeningImpl();
                                 }
                                 catch (Exception eee)
                                 {
-                                	logger.error(LocalUDPDataReciever.TAG, "本地UDP监听停止了(socket被关闭了?)," + eee.getMessage(), eee);
+                                	logger.error( "本地UDP监听停止了(socket被关闭了?)," + eee.getMessage(), eee);
                                 }
                         }
                 });
@@ -63,7 +63,7 @@ public class LocalUDPDataReciever
                          
                         // 解析服务端发过来的数据
                         String pFromServer = new String(packet.getData(), 0 , packet.getLength(), "UTF-8");
-                        logger.debug(LocalUDPDataReciever.TAG, "【NOTE】>>>>>> 收到服务端的消息："+pFromServer);
+                        logger.debug( "【NOTE】>>>>>> 收到服务端的消息："+pFromServer);
                 }
         }
 }
